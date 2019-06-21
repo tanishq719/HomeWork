@@ -9,6 +9,7 @@ git commit -m "message" : take a snapshot of the repository and save it with a m
 git commit -am <filename(s)> "message" : add files and commit changes all in one
 git status : print what is currently going on with the repository
 git push : push any local changes (commits) to a remote server
+aklernfaernvfnrj
 git pull : pull any remote changes from a remote server to a local computer
 git log : print a history of all the commits that have been made
 git reflog : print a list of all the different references to commits
