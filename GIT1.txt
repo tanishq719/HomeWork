@@ -10,6 +10,13 @@ git commit -am <filename(s)> "message" : add files and commit changes all in one
 git status : print what is currently going on with the repository
 git push : push any local changes (commits) to a remote server
 git pull : pull any remote changes from a remote server to a local computer
+	*** merge conflicts could be their when the git get confused which content should be kept between the two at the same place, so when we pull we get the file as -->
+	<<<<<<
+		// some text	<-- these are the changes made on our local computer by us
+	=======
+		// some text	<-- these are the changes made by someone other remotely
+	>>>>>>
+	***
 git log : print a history of all the commits that have been made
 git reflog : print a list of all the different references to commits
 git reset --hard <commit> : reset the repository to a given commit
