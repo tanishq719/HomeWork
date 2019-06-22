@@ -19,7 +19,7 @@ git push : push any local changes (commits) to a remote server
 git pull : pull any remote changes from a remote server to a local computer
 git log : print a history of all the commits that have been made
 git reflog : print a list of all the different references to commits
-git reset --hard <commit> : reset the repository to a given commit
+git reset --hard <commit> : reset the repository to a given commit	// the commit here is the hashcode of the commit
 git reset --hard origin/master : reset the repository to its original state (e.g. the version cloned from GitHub)
 When combining different versions of code, e.g. using git pull, a merge conflict can occur if the different versions have different data in the same location. Git will try to take care of merging automatically, but if two users edit, for example, the same line, a merge conflict will have to be manually resolved.
 To resolve a merge conflict, simply locally remove all lines and code that are not wanted and push the results.
