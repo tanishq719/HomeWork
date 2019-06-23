@@ -7,6 +7,10 @@ git branch : list all the branches currently in a repository
 git branch <name> : create a new branch called name
 git checkout <name> : switch current working branch to name
 git merge <name> : merge branch name into current working branch (normally master)
+	***
+		when we need to push these changes to the original, need to run following command
+		git push --set-upstream origin (branch_name)
+	***
 Any version of a repository that is not stored locally on a device is called a ‘remote’. ‘Origin’ is used to refer to the remote from which the local repository was originally downloaded from.
 Some Git commands related to remotes:
 git fetch : download all of the latest commits from a remote to a local device
@@ -16,6 +20,8 @@ A ‘fork’ of a repository is an entirely separate repository which is copy of
 Open source projects are often developed using forks. There will be one central version of the software which contributors will fork and improve on, and when they want these changes to be merged into the central repository, they submit a ‘pull request’.
 A pull request can be made to merge a branch of a repository with another branch of the same repository or even a different repository. Pull requests are a good way to get feedback on changes from collaborators on the same project.
 Note that forks and pull requests are both GitHub specific features.
+git forks -> this work only on github site, which basically copies the whole branch for the user and let him do whatever changes that he want
+
 More on HTML
 More useful HTML tags:
 <a href="path/to/hello.html">Click here!</a> : link to hello.html, some URL, or some other content marked by id by passing #id to href
