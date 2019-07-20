@@ -1,3 +1,24 @@
 Database -> is actually an engine that simply interpretate your queries and generate results
-tools -> tools are actually associated with the database that helps in interaction with the database either in running the queries or seeing the result of the queries./
- 
+tools ->    tools are actually associated with the database that helps in interaction with the database either in running              the queries or seeing the result of the queries./
+CRUD :      is acronym for Create Read Update and Delete
+Composite key -> a primary key can have two or more coloumns such that each entry forms a unique combination, such keys                  are known as Composite keys
+SQL ->      comprises of 4 languages: Data Query Language(DQL), Data Definition Language(DDL), Data Control Language(DCL),             Data Manipulation language(DML), {QDCM}
+Some commands ->
+	\l - for listing the available database
+	\d - d for describe, this shows all the tables in the present database
+	   - one step further if we do \d table_name then it will describe the schema of the table 
+	\q - to quit
+	\c - this is followed by the name of the valid database to which we want to switch
+	\h - for help
+SQL Syntax ->
+	CREATE TABLE (
+		col_name data_type any_constraint	// data-types : https://www.postgresql.org/docs/9.5/datatype.html
+		so n so forth
+	);
+
+	INSERT INTO table_name ( col_names	// in the actual order
+	VALUES ( values in the order );
+
+	SELECT col_name/s FROM table_name;
+	SELECT col_name/s FROM table_name ORDER BY col_name ASC/DESC;
+	SELECT DISTINCT col_name/s FROM table_name;	
