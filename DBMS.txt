@@ -16,9 +16,36 @@ SQL Syntax ->
 		so n so forth
 	);
 
-	INSERT INTO table_name ( col_names	// in the actual order
+	INSERT INTO table_name ( col_names)	// in the actual order
 	VALUES ( values in the order );
 
 	SELECT col_name/s FROM table_name;
 	SELECT col_name/s FROM table_name ORDER BY col_name ASC/DESC;
 	SELECT DISTINCT col_name/s FROM table_name;	
+	
+	SELECT 1 <> 1;	// not equals
+	
+	SELECT * FROM table_name OFFSET 5 LIMIT 10;	// this will select rows from row no 6 all the way to row no 15
+	SELECT * FROM table_name OFFSET 5 FETCH FIRST 10 ROW ONLY;	// this will do same
+
+	SELECT * FROM table_name WHERE col_name IN (value1 ,value2, value3);	// this is analogus to below
+	SELECT * FROM table_name WHERE col_name1 = value1 OR col_name1 = value2 OR col_name = value3;
+
+	SELECT * FROM table_name WHERE col_name1 BETWEEN value1 AND value2;
+
+
+	WiLdCaRd ->
+	SELECT * FROM table_name WHERE col_name1 LIKE '%char_seq';	// here % is for 'any character' and its a syntax
+	// % in start denotes that char_seq can come after 'any character' & % in end means same can be followed by any ch
+	SELECT * FROM table_name WHERE col_name1 LIKE '___char_seq';	// the no of underscores(3) helped to choose one 									           with three characters followed by char_seq
+	// instead of LIKE we can use ILIKE for case insensitive selection
+	
+
+	SELECT col_name1, COUNT(*) FROM table_name GROUP BY col_name1;	// COUNT() is actually a function which is written 									at the place of columns so that it is also showed
+	SELECT col_name1, COUNT(*) FROM table_name GROUP BY col_name1 HAVING COUNT(*) > 5;
+									// HAVING clause must come right after GROUP BY			 
+
+
+
+
+	
