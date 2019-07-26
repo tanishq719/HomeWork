@@ -47,4 +47,24 @@
 	vector<int>::iterator it = v.begin();
 	vector<int> :: iterator it2 = v.end();
 	v.insert(it+2, 3);
+	auto it = lower_bound(v.begin(), v.end(), 11)	// this will give first repeting 11
+	copy(v.begin(), v.end(), v2.begin());
+8) Algorithm:--
+	bool present = binary_search(v.begin(), v.end(), 5);
+	sort(v.begin(), v.end(), f);	// where f is a user defined function(data type bool) which simply returns x < y i.e in Ascending order, i.e swaps for false value of f()
+
+9) Set:--
+	set<int> s;
+	s.insert(5);	// by default it maintains ascending order
+	auto it = s.find(5) // gives iterator to that else s.end()
+	auto it = s.lower_bound(-1);	if a lower bound or upper bound is not found than it returns an iterator to the next position
+	s.erase(5);
+10) Map:--
+	map<int , int> m;
+	m[2] = 100;
+	m.find(2) ;
+	m.erase(2);
+	m.add(2,18);
+
+	
 	
