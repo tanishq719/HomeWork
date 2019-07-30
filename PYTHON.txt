@@ -1,0 +1,9 @@
+Some commands -->
+	pip list;	// list out all the installed packages
+	project1_env\Scripts\activate
+	deactivate
+	set FLASK_APP = flaskPro.py	// for setting environment path named FLASK_APP, it could not be anything else
+	set FLASK_DEBUG = True
+	// above two are needed when we are not running the app through python directly
+
+in Flask Session is actually a dictionary
