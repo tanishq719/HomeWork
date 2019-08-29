@@ -10,6 +10,8 @@ Some commands ->
 	\q - to quit
 	\c - this is followed by the name of the valid database to which we want to switch
 	\h - for help
+	\? - help
+	\i file
 SQL Syntax ->
 	CREATE TABLE (
 		col_name data_type any_constraint	// data-types : https://www.postgresql.org/docs/9.5/datatype.html
@@ -41,11 +43,47 @@ SQL Syntax ->
 	// instead of LIKE we can use ILIKE for case insensitive selection
 	
 
-	SELECT col_name1, COUNT(*) FROM table_name GROUP BY col_name1;	// COUNT() is actually a function which is written 									at the place of columns so that it is also showed
+	SELECT col_name1, COUNT(*) FROM table_name GROUP BY col_name1;	// COUNT() is actually a function which is written 		GROUP BY CAN BE LIKE 'GROUP BY col_name1, col_name2'		at the place of columns so that it is also showed
 	SELECT col_name1, COUNT(*) FROM table_name GROUP BY col_name1 HAVING COUNT(*) > 5;
-									// HAVING clause must come right after GROUP BY			 
+									// HAVING clause must come right after GROUP BY	
+								// in many cases when u cant use where you use HAVING	
+	SELECT FIRST_NAME||' '||LAST_NAME FROM WORKER WHERE FIRST_NAME LIKE 'N%';
 
+	SOME FUNCTIONS: -- 
+	
+	UPPER() & LOWER()
+	LEFT(STRING, N)
 
+****************************************************************************************************************
+types of joins:
+1) Inner join(simply join)
+2) outer join:
+	i) full outer join
+	ii) left outer join(all left including overlapping right)
+	iii) right outer join
+3) Natural join
 
+EXCEPT works as MINUS(in mysql)
+**************************************************************************************************************
+SELECT I.ID, I.NAME, CASE WHEN COUNT(T.SEC_ID) = NULL THEN 0 ELSE COUNT(T.SEC_ID) END FROM INSTRUCTOR I RIGHT OUTER JOIN TEACHES T ON I.ID = T.ID GROUP BY I.ID;
 
+<for case-end, it works for if else>
+
+-->COALESCE
+COALESCE(value [, ...])
+The COALESCE function returns the first of its arguments that is not null. Null is returned only if all arguments are null. It is often used to substitute a default value for null values when data is retrieved for display, for example:
+
+SELECT COALESCE(description, short_description, '(none)') ...
+Like a CASE expression, COALESCE will not evaluate arguments that are not needed to determine the result; that is, arguments to the right of the first non-null argument are not evaluated. This SQL-standard function provides capabilities similar to NVL and IFNULL, which are used in some other database systems.
+
+-->NULLIF
+NULLIF(value1, value2)
+if value1 and value2 are equal then the function will return null else value1, this can be used together with COALESCE for saving from exceptions and various other calculation;
+
+***************************************************************************************************************
+
+ALTER TABLE table_name ADD PRIMARY KEY(name_of_unique_key);
+ALTER TABLE table_name ADD CONSTRAINT user_defined_name UNIQUE(col_name);	// here instead of ADD, DROP can be written
+UPDATE person SET email = 'abc@gmail.com' WHERE id = 2011;
+\copy (your select query) TO 'adderess of csv' DELIMITER ',' CSV HEADER;
 	

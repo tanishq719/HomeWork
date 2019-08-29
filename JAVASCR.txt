@@ -1,0 +1,20 @@
+<script>
+	alert('Hello!');	// for allert message
+</script>
+
+function hello(){
+	//something;
+}
+
+<button onclick = "hello()"> click here </button>	// it is the event listener which is in the form of atribute
+let var = 5;		// this how we declare variable in javascript
+
+<script src="count0.js"></script>
+basically variables are of 3 types:
+const count;	// once assigned cant be assigned later
+let count;	// valid only in the declared scope
+var count;	// valid in all scopes in the function it is declared
+
+JSON : -- used for communicating easily both at server side and at client by javascript
+AJAX : -- used to communicate with the server by the client without loading the page; it is basically a technology which is named so , not any specific library
+WEBSOCKETS :-- used to communicate between all the sessions simulteneously so that all session user get updated if one user do somechanges;  it is also a technology: need to understand its use properly:)

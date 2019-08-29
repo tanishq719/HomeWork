@@ -65,6 +65,9 @@
 	m.find(2) ;
 	m.erase(2);
 	m.add(2,18);
-
-	
+11) Stack:--
+	stack<int> s;
+	st.push(5)
+	st.pop()
+	int a = st.top()
 	
