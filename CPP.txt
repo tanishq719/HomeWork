@@ -54,7 +54,7 @@
 	sort(v.begin(), v.end(), f);	// where f is a user defined function(data type bool) which simply returns x < y i.e in Ascending order, i.e swaps for false value of f()
 
 9) Set:--
-	set<int> s;
+	set<int,greater<int>> s;	// greater will sort in reverse order
 	s.insert(5);	// by default it maintains ascending order
 	auto it = s.find(5) // gives iterator to that else s.end()
 	auto it = s.lower_bound(-1);	if a lower bound or upper bound is not found than it returns an iterator to the next position

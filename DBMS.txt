@@ -83,7 +83,21 @@ if value1 and value2 are equal then the function will return null else value1, t
 ***************************************************************************************************************
 
 ALTER TABLE table_name ADD PRIMARY KEY(name_of_unique_key);
-ALTER TABLE table_name ADD CONSTRAINT user_defined_name UNIQUE(col_name);	// here instead of ADD, DROP can be written
+
+ALTER TABLE table_name ADD CONSTRAINT user_defined_name UNIQUE(col_name);	// here instead of ADD, DROP can be written( for drop write DROP CONSTRAINT col_name;
+
 UPDATE person SET email = 'abc@gmail.com' WHERE id = 2011;
+
+ALTER TABLE table_name
+ALTER COLUMN column_name_1 [SET DATA] TYPE new_data_type,
+ALTER COLUMN column_name_2 [SET DATA] TYPE new_data_type;
+
 \copy (your select query) TO 'adderess of csv' DELIMITER ',' CSV HEADER;
-	
+
+********************************************************************************************************************
+correlated query:
+
+select * from realtion1 where > (select * from realtion2 where r2.attribute = r1.attribute)
+exist(query)
+>any
+<all	
