@@ -18,3 +18,42 @@ var count;	// valid in all scopes in the function it is declared
 JSON : -- used for communicating easily both at server side and at client by javascript
 AJAX : -- used to communicate with the server by the client without loading the page; it is basically a technology which is named so , not any specific library
 WEBSOCKETS :-- used to communicate between all the sessions simulteneously so that all session user get updated if one user do somechanges;  it is also a technology: need to understand its use properly:)
+
+*************************************************************************************************
+
+console
+.log()
+.clear()
+.alert()
+.table(obj)
+.warn()
+.time('your code took')		//time of start
+.timeEnd('your code took')	// lable must be same
+.assert(validation_condition, what to print if true)
+.error('error message')
+##############################
+
+typeof()	// operator
+data types are of two types: 1) primitive(undefined, null, number, string, boolean) 2) referenced(all object like array)
+
+TYPE CONVERSION:
+String(num)
+Number(str)
+parseInt(35.8)
+parseFloat(768.3)
+number.toFixed(2)	// 2 places of decimal
+
+ary1.unshift(34)	// to insert in front of array ary1
+ary1.shift(34)		// to pop from front
+ary1.splice(1,4)	// splice is used to delete element from 1 index upto 1+4-1
+
+== its loosly coupled and checks for equivalence of values
+=== it along with value also checks for type equivalence
+
+a = prompt("Type your name")	// this input text and set it to a
+a = confirm("Are you sure")	// this prompts yes and and cancel option, and assign true or false in accordingly
+window.innerHeight
+window.innerWidth
+window.scrollX
+window.scrollY
+ 
