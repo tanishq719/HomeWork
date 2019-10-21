@@ -1,0 +1,20 @@
+AWK : -->
+
+1) awk 'pattern{action}' file
+
+   where the pattern indicates the pattern or the condition on which the action is to be executed for every line matching the pattern. In case of a pattern not being present, the action will be executed for every line of the file. In case of the action part not being present, the default action of printing the line will be done. Let us see some examples:
+
+EX : $ awk 'NR!=1{print $1}' file1
+Deepak
+Neha
+Vijay
+Guru
+
+The above awk command uses a special variable NR. NR denotes line number ranging from 1 to the actual line count. The conditon 'NR!=1' indicates not to execute the action part for the first line of the file, and hence the header record gets skipped.
+
+$ awk -F"," 'NR!=1{print $1,$3}' OFS="," file1
+Deepak,MQ Series
+Neha,Power Builder
+Vijay,CRM Expert
+Guru,Unix
+  OFS is another awk special variable. Just like how FS is used to separate the input fields, OFS (Output field separator) is used to separate the output fields.
